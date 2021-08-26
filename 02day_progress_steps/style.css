@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+/********** Overall setting  ********/
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h4,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+  height: 100vh;
+  min-height: 800px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1446822775955-c34f483b410b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 80vw;
+  min-width: 500px;
+  max-width: 1200px;
+  margin: 40px;
+  padding: 30px;
+  border-radius: 30px;
+  background: rgba(245, 245, 245, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/********** headline section *********/
+h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(28, 43, 110);
+  letter-spacing: 7px;
+}
+
+.cheer-icon,
+.gift-icon {
+  color: rgba(158, 157, 83, 0.884);
+  margin: 0 4px;
+}
+
+span.emphasis {
+  color: rgb(60, 151, 139);
+}
+
+/********* description and forms  *********/
+.description {
+  margin: 10px 0;
+  width: 85%;
+  font-size: 18px;
+}
+
+.personal-info-form {
+  margin: 10px 0;
+  width: 85%;
+  height: 300px;
+  border-radius: 5px;
+  background-color: rgba(159, 179, 185, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  color: rgba(68, 107, 107, 0.75);
+}
+
+.working-icon {
+  font-size: 45px;
+}
+
+/******* progress bar ********/
+.progress-container {
+  margin: 40px 0 20px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* as progress-line shadow */
+.progress-container::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+  background-color: rgba(167, 166, 140, 0.4);
+  transition: 0.4s ease;
+  transform: translateY(-50%);
+}
+
+.progress-line {
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: teal;
+  transition: 0.4s ease;
+  transform: translateY(-50%);
+}
+
+.circle {
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+  border: 3px solid rgb(60, 151, 139);
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  font-family: 'Roboto', sans-serif; /* 'Noto Sans TC' would cause a shift in the position of number */
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(60, 151, 139);
+}
+
+.circle.active {
+  background-color: rgb(60, 151, 139);
+  color: #f3f3f3;
+}
+
+/******* button section ********/
+.btn-section {
+  margin: 15px 0;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  /* outline: 2px solid red; */
+}
+
+.btn {
+  width: 40%;
+  /* min-width: 100px; */
+  margin: 0 10px;
+  padding: 4px;
+  border: 0;
+  border-radius: 6px;
+  background-color: rgb(60, 151, 139);
+  font-size: 17px;
+  font-weight: 500;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: rgba(143, 143, 115, 0.8);
+  cursor: not-allowed;
+}
+
+.btn.submit {
+  background-color: rgb(35, 155, 211);
+}
+
+.btn.submit::after {
+  content: '(送出)';
+}
+
+.table-footer {
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: rgba(20, 20, 15, 0.4);
+  color: rgb(187, 187, 161);
+  position: absolute;
+  bottom: -27px;
+  right: 3px;
+}

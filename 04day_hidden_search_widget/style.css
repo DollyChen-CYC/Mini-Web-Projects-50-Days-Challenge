@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 30px;
+  padding: 0;
+  font-family: 'Teko', 'Oswald', 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-10%);
+  background-color: #606831;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  letter-spacing: 1;
+  color: #ffffff;
+}
+
+.search-section {
+  position: relative;
+}
+
+.search-box {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 2px 22px 2px 12px;
+  color: #575f2c;
+  font-family: 'Oswald', 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1;
+  font-weight: 500;
+  transition: width 0.3s ease;
+}
+
+.search-box::placeholder {
+  color: #6068318a;
+  letter-spacing: 0.7;
+}
+
+.search-section.show-search-box .search-box {
+  width: 300px;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #e6f5e6;
+  border: none;
+  border-radius: 5px;
+  vertical-align: top;
+  font-size: 20px;
+  color: #444925;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #444925;
+  color: #e6f5e6;
+  border: 1px solid #e6f5e6;
+}
+
+.btn:focus,
+.search-box:focus {
+  outline: none;
+}
+
+.search-section.show-search-box .btn {
+  transform: translateX(287px);
+}
