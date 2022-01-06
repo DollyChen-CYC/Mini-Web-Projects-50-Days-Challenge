@@ -1,0 +1,100 @@
+/***** Overall Setting  *****/
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: steelblue;
+  color: #ffffff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  margin: 5px 10px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/***** Button *****/
+.container .login-btn {
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 15px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 18px;
+  background: lightblue;
+  color: #333;
+  cursor: pointer;
+}
+
+.container p {
+  margin: 20px 0;
+}
+
+.container p > a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: lightblue;
+}
+
+/***** class = form-control *****/
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  display: block;
+  font-size: 18px;
+  padding: 15px 0;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0; /* 注意是 outline，不是 border */
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  font-size: 18px;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  /* transition: 0.3s ease-in-out; */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* 直接照抄老師的 cubic-bezier 參數 */
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+/* 要補上 input:valid ，不然當游標移開，比如打完第一行要去第二行時，label 的 y-axis 就會恢復 */
